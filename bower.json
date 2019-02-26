@@ -1,0 +1,21 @@
+{
+  "name": "QRCodeSymbols",
+  "authors": [
+    "Thomas Weinert <thomas@weinert.info>"
+  ],
+  "description": "Generate qr codes with symbols as dots",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "qrcode-svg": "https://raw.githubusercontent.com/papnkukn/qrcode-svg/master/dist/qrcode.min.js"
+  }
+}

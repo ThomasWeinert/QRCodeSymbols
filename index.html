@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Symbols QRCode Generator</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<form action="#">
+  <div class="input">
+    <label for="content-input">Content:</label>
+    <input type="text" id="content-input" value="some test content">
+    <button type="submit">Show</button>
+    <button type="button" class="download">Download</button>
+  </div>
+  <div id="symbols">
+    <label>
+      <input type="checkbox">
+      <object type="image/svg+xml" data="symbols/cup.svg"></object>
+      Cup
+    </label>
+    <label>
+      <input type="checkbox">
+      <object type="image/svg+xml" data="symbols/egg-in-pan.svg"></object>
+      Fried Egg
+    </label>
+    <label>
+      <input type="checkbox">
+      <object type="image/svg+xml" data="symbols/monkey.svg"></object>
+      Monkey
+    </label>
+    <label>
+      <input type="checkbox">
+      <object type="image/svg+xml" data="symbols/shamrock.svg"></object>
+      Shamrock
+    </label>
+    <label>
+      <input type="checkbox">
+      <object type="image/svg+xml" data="symbols/sheep.svg"></object>
+      Sheep
+    </label>
+  </div>
+</form>
+<div class="output" style="white-space: pre; font-family: monospace;">
+
+</div>
+</body>
+<script type="text/javascript" src="bower_components/qrcode-svg/index.js"></script>
+<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript">
+  document.querySelector('form').addEventListener(
+    'submit',
+    function (event) {
+      event.stopPropagation();
+      event.preventDefault();
+      document.querySelector('.output').innerHTML = (new QRCodeSymbols()).svg(document.querySelector('#content-input').value);
+    }
+  );
+  document.querySelector('form button.download').addEventListener(
+    'click',
+    function (event) {
+      event.stopPropagation();
+      event.preventDefault();
+      (new QRCodeSymbols()).download(document.querySelector('#content-input').value, 'qrcode.svg');
+    }
+  );
+</script>
+</html>
