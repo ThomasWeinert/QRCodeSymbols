@@ -1,0 +1,13 @@
+{
+  "name": "qrcode-svg",
+  "_cacheHeaders": {
+    "ETag": "\"a999be8bb01511dac3c17e886414593a7a7d19fd\"",
+    "Content-Length": "5983",
+    "Content-Type": "text/plain; charset=utf-8"
+  },
+  "_release": "e-tag:a999be8bb",
+  "main": "index.js",
+  "_source": "https://raw.githubusercontent.com/papnkukn/qrcode-svg/master/dist/qrcode.min.js",
+  "_target": "*",
+  "_originalSource": "https://raw.githubusercontent.com/papnkukn/qrcode-svg/master/dist/qrcode.min.js"
+}
