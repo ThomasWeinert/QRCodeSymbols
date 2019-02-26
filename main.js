@@ -10,6 +10,9 @@ const QRCodeSymbols = (
     };
 
     QRCodeSymbols.prototype.svg = function(text) {
+      if (text === '') {
+        return '';
+      }
       let modules = new QRCode(text).qrcode.modules;
       const dotSize = this.settings.dotSize;
       const svg = document.implementation.createDocument(xmlns_svg, 'svg', null);

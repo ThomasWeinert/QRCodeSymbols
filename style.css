@@ -17,18 +17,22 @@ form {
   box-shadow: 0 5px 5px darkgray;
   font-family: sans-serif;
 }
+form .input {
+  display: flex;
+}
 
 form label[for="content-input"] {
   display: none;
 }
 form button {
-  background-color: #000;
-  color: rgb(70, 70, 70);
-  border: 1px solid rgb(70, 70, 70);
+  background-color: transparent;
+  color: #cccccc;
+  border: 1px solid #cccccc;
   border-radius: 4px;
   text-align: center;
-  font-size: 30px;
-  height: 34px;
+  font-size: 20px;
+  line-height: 28px;
+  margin: 0 4px;
 }
 
 input#content-input {
@@ -39,15 +43,23 @@ input#content-input {
   text-align: center;
   font-size: 30px;
   height: 34px;
-  width: 80%;
+  width: 100%;
+  margin: 0 4px 0 0;
 }
 
 #symbols {
   background-color: #FFF;
   margin-top: 10px;
+  padding: 10px;
+  border-radius: 4px;
 }
 
 #symbols object {
   width: 16px;
   height: 16px;
+}
+
+.output {
+  display: table;
+  margin: auto;
 }
