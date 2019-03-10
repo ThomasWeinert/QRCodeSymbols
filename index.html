@@ -13,33 +13,7 @@
     <button type="submit">Show</button>
     <button type="button" class="download">Download</button>
   </div>
-  <div id="symbols">
-    <label>
-      <input type="checkbox" checked>
-      <object type="image/svg+xml" data="symbols/cup.svg"></object>
-      Cup
-    </label>
-    <label>
-      <input type="checkbox">
-      <object type="image/svg+xml" data="symbols/egg-in-pan.svg"></object>
-      Fried Egg
-    </label>
-    <label>
-      <input type="checkbox">
-      <object type="image/svg+xml" data="symbols/monkey.svg"></object>
-      Monkey
-    </label>
-    <label>
-      <input type="checkbox">
-      <object type="image/svg+xml" data="symbols/shamrock.svg"></object>
-      Shamrock
-    </label>
-    <label>
-      <input type="checkbox">
-      <object type="image/svg+xml" data="symbols/sheep.svg"></object>
-      Sheep
-    </label>
-  </div>
+  <div id="symbols"></div>
 </form>
 <div class="output" style="white-space: pre; font-family: monospace;">
 
@@ -48,9 +22,30 @@
 <script type="text/javascript" src="bower_components/qrcode-svg/index.js"></script>
 <script type="text/javascript" src="main.js"></script>
 <script type="text/javascript">
+  (
+    () => {
+      const symbols = document.querySelector('#symbols');
+      [
+        'beer-pint', 'beer-stein', 'cup', 'egg-in-pan',
+        'heart', 'monkey', 'shamrock', 'sheep'
+      ].forEach(
+        (name) => {
+          const image = document.createElement('object');
+          image.setAttribute('type', 'image/svg+xml');
+          image.setAttribute('data', 'symbols/' + name + '.svg');
+          const input = document.createElement('input');
+          input.setAttribute('type', 'checkbox');
+          const label = document.createElement('label');
+          label.append(input, image);
+          symbols.append(label);
+        }
+      )
+    }
+  )();
+
   document.querySelector('form').addEventListener(
     'submit',
-    function (event) {
+    (event) => {
       event.stopPropagation();
       event.preventDefault();
       document.querySelector('.output').innerHTML = (new QRCodeSymbols()).svg(document.querySelector('#content-input').value);
@@ -58,7 +53,7 @@
   );
   document.querySelector('form button.download').addEventListener(
     'click',
-    function (event) {
+    (event) => {
       event.stopPropagation();
       event.preventDefault();
       (new QRCodeSymbols()).download(document.querySelector('#content-input').value, 'qrcode.svg');

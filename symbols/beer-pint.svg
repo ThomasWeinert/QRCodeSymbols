@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(0 -292.77)">
+    <path d="m3.0073 293.77c-0.51723 0-0.9925 0.43184-0.94922 0.94726l1.0165 12.104c0.043285 0.51542 0.43198 0.94922 0.94922 0.94922h8.0188c0.51723 0 0.90687-0.43373 0.94922-0.94922l0.99437-12.104c0.04235-0.51549-0.43198-0.94726-0.94922-0.94726zm0.017578 0.96484h9.9945l-0.22097 2.0684h-9.5967z" color="#000000" color-rendering="auto" dominant-baseline="auto" image-rendering="auto" shape-rendering="auto" solid-color="#000000" style="font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;isolation:auto;mix-blend-mode:normal;shape-padding:0;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal"/>
+    <rect transform="rotate(-4.2281)" x="-18.113" y="297.28" width="1" height="4" ry=".5" fill="#555753"/>
+  </g>
+</svg>
