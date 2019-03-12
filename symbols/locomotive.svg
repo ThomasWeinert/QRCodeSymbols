@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(0 -292.77)">
+    <g>
+      <rect x="1" y="299.77" width="14" height="7" ry=".5"/>
+      <rect x="9" y="294.77" width="6" height="8" ry=".5"/>
+      <rect x="3" y="296.77" width="3" height="6" ry=".5"/>
+      <rect x="8" y="293.77" width="8" height="2" ry=".5"/>
+      <circle cx="4.5466" cy="306.22" r="2.5"/>
+      <circle cx="11.569" cy="306.22" r="2.5"/>
+    </g>
+    <g>
+      <rect x="10" y="295.77" width="4" height="5" ry=".41667" fill="#2e3436"/>
+      <ellipse cx="5.7556" cy="294.49" rx="1.5" ry=".9767" fill="#555753"/>
+      <ellipse cx="4.4301" cy="295.65" rx="1.5" ry=".88368" fill="#555753"/>
+    </g>
+  </g>
+</svg>
