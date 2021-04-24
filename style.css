@@ -1,6 +1,12 @@
 html, body {
   margin: 0;
   padding: 0;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
 }
 
 * {
@@ -69,6 +75,8 @@ input#content-input {
 }
 
 .output {
-  display: table;
-  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
