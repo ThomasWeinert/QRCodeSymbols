@@ -18,8 +18,8 @@ const QRCodeSymbols = (
       const dotSize = this.settings.dotSize;
       const svg = document.implementation.createDocument(xmlns_svg, 'svg', null);
       const length = modules.length;
-      svg.documentElement.setAttribute('width', length * dotSize);
-      svg.documentElement.setAttribute('height', length * dotSize);
+      svg.documentElement.setAttribute('width', (length * dotSize).toString());
+      svg.documentElement.setAttribute('height', (length * dotSize).toString());
 
       const defs = svg.documentElement.appendChild(
         svg.createElementNS(xmlns_svg, 'defs')
@@ -58,20 +58,20 @@ const QRCodeSymbols = (
         const outer = svg.documentElement.appendChild(
           svg.createElementNS(xmlns_svg, 'rect')
         );
-        outer.setAttribute('x', x * dotSize + dotSize / 2);
-        outer.setAttribute('y', y * dotSize + dotSize / 2);
-        outer.setAttribute('width', 6 * dotSize);
-        outer.setAttribute('height', 6  * dotSize);
+        outer.setAttribute('x', (x * dotSize + dotSize / 2).toString());
+        outer.setAttribute('y', (y * dotSize + dotSize / 2).toString());
+        outer.setAttribute('width', (6 * dotSize).toString());
+        outer.setAttribute('height', (6  * dotSize).toString());
         outer.setAttribute('fill', 'none');
         outer.setAttribute('stroke', '#000');
         outer.setAttribute('stroke-width', dotSize);
         const inner = svg.documentElement.appendChild(
           svg.createElementNS(xmlns_svg, 'rect')
         );
-        inner.setAttribute('x', (x + 2) * dotSize);
-        inner.setAttribute('y', (y + 2) * dotSize);
-        inner.setAttribute('width', 3 * dotSize);
-        inner.setAttribute('height', 3  * dotSize);
+        inner.setAttribute('x', ((x + 2) * dotSize).toString());
+        inner.setAttribute('y', ((y + 2) * dotSize).toString());
+        inner.setAttribute('width', (3 * dotSize).toString());
+        inner.setAttribute('height', (3  * dotSize).toString());
         inner.setAttribute('fill', '#000');
       };
       addCorner(0, 0, dotSize);
@@ -88,8 +88,8 @@ const QRCodeSymbols = (
           const dot = svg.documentElement.appendChild(
             svg.createElementNS(xmlns_svg, 'rect')
           );
-          dot.setAttribute('x', x * dotSize);
-          dot.setAttribute('y', y * dotSize);
+          dot.setAttribute('x', (x * dotSize).toString());
+          dot.setAttribute('y', (y * dotSize).toString());
           dot.setAttribute('width', dotSize);
           dot.setAttribute('height', dotSize);
           if (patterns.length > 0) {
