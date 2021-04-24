@@ -7,6 +7,7 @@ const QRCodeSymbols = (
       settings.dotSize = settings.dotSize || 16;
       settings.symbolsSelector = '#symbols input[type="checkbox"]:checked + object';
       this.settings = settings;
+      this.current = null;
     };
 
     QRCodeSymbols.prototype.svg = function(text) {
@@ -98,12 +99,13 @@ const QRCodeSymbols = (
           }
         }
       }
-      return (new XMLSerializer()).serializeToString(svg.documentElement);
+      this.current = (new XMLSerializer()).serializeToString(svg.documentElement);
+      return this.current;
     };
 
     QRCodeSymbols.prototype.download = function(text, filename) {
       const element = document.createElement('a');
-      const data = this.svg(text);
+      const data = this.current || this.svg(text);
       console.log(data);
       element.setAttribute('href', 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(data));
       element.setAttribute('download', filename);
